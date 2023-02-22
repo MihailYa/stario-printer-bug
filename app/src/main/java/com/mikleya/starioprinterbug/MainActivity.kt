@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun launchSearchPrinters() = lifecycleScope.launch(Dispatchers.Default) {
-    repeat(100) {
+    repeat(1000) {
       Log.d(TAG, "Try to reproduce ConcurrentModificationException bug #$it")
 
       val job1 = launch {
